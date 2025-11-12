@@ -51,8 +51,11 @@ namespace ConsoleApplication1
         public static List<PipesList> RemoveTheSmallPipes(List<PipesList> lstPipeTypes)
         {
 
-            //Place your code in here
-            //It should remove all pipes that have lengths lower than 19.
+            foreach (var pipeList in lstPipeTypes)
+            {
+                //Remove each pipe with a length less than 20
+                pipeList.Pipes.RemoveAll(pipe => pipe.length < 20);
+            }
 
             return lstPipeTypes;
 
